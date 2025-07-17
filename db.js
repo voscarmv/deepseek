@@ -46,11 +46,11 @@ async function postRecord(table, record = {}){
     let kys = '';
     let vals = '';
     for(let i = 0; i < values.length; i++){
-        kys += `${keys[i]}, `;
-        vals += `$${i+1}, `;
+        kys += `${keys[i]},`;
+        vals += `$${i+1},`;
     }
-    kys = `(${kys.slice(0,-2)})`;
-    vals = `(${vals.slice(0,-2)})`;
+    kys = `(${kys.slice(0,-1)})`;
+    vals = `(${vals.slice(0,-1)})`;
     const result = await pool.query(
         `insert into ${table} ${kys} values${vals} returning id`,
         values
