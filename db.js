@@ -25,7 +25,7 @@ async function ensureTables() {
 async function dropTables(){
     const q = `drop table messages; drop table users;`;
     await pool.query(q);
-    console.log('⬇️ Tables dropped');    
+    console.log('🗑️ Tables dropped');    
 }
 
 async function getRecordCol(table, column, id){
