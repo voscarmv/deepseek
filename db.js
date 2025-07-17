@@ -19,13 +19,13 @@ async function ensureTables() {
       created_at timestamp with time zone default now());
     `;
     await pool.query(q);
-    console.log('✅ Tables ensured');
+    console.log('🐣 Tables ensured');
 }
 
 async function dropTables(){
     const q = `drop table messages; drop table users;`;
     await pool.query(q);
-    console.log('Tables dropped');    
+    console.log('⬇️ Tables dropped');    
 }
 
 async function getRecordCol(table, column, id){
