@@ -1,2 +1,2 @@
 # deepseek
-Checking out deepseek
+Barebones chat app for deepseek.
