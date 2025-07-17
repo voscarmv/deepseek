@@ -36,7 +36,7 @@ async function getRecordCol(table, column, id){
 async function getAllRecords(table, filter){
     const key = Object.keys(filter)[0];
     const value = Object.values(filter)[0];
-    const { rows } = await pool.query(`select * from ${table} where ${key} = ${value};`);
+    const { rows } = await pool.query(`select * from ${table} where ${key} = ${value} order by created_at asc;`);
     return rows;
 }
 
